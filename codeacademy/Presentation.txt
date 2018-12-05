@@ -1,0 +1,43 @@
+
+
+While building the maze, we attempted moving 2 cells at a time.
+  - What would the maze look like when moving a larger number of cells?
+    > Maze would less complicated with larger number of cells and would be less recursive calls of the mow method.
+
+  - What would the maze look like if this number was not constant?
+    > Maze may not have a good path going thru from one point to the end as it's only removing one wall at a time.
+
+- What algorithms could you use to find a path through this maze? Compare and contrast at least 2.
+   > DFS (Depth-First Search) algorithm is not ideal to find the shortest path between two points so considering the three following algorithms:
+     BFS, Dijkstra and A*.
+     BFS (Breadth-First Search) algorithm is a very good to find the shortest path between two points when edge cost is equal,
+     Dijkstra's algorithm works as same as BFS when all edges are equally costly. Also Dijkstra's algorithm can work with different edge costs.
+     A* algorithm is a modified Dijkstra's algorithm which is even more efficient by not checking all the vertices
+     but only considering the vertices which are more close to the target vertex.
+
+- How does knowing the algorithm used to generate the maze influence the best algorithm to solve it with?
+  > When generating the maze, it removes walls randomly and recursively starting from the start point then put a Swag in 10% ratio with BFS.
+    At last put an end which is the farthest from the start point.
+    In order to find the best algorithm to the given problem, should take all the factors into the consideration.
+    in this maze, each cell has same distance with 1 so Dijkstra would work same as BFS. 
+    you may use A* to use heuristic evaluations. It could be distance to the end point by using Manhattan distance.
+    you may want to give more points with the paths that has swags if it's considered more important from the requirement.
+
+
+- As a patron picking up swag along the way, how might you best store the list of items you've collected?
+  > When picking up a swag along the way, putting the item into a list. Then simply return the list when the leaving the maze.
+
+- If the farmer asked you to sort the items you collected before leaving the maze,
+what sorting algorithms would you consider using (assume a much larger list of possible swag)?
+- How does the quantity and variety of swag influence your answer?
+  > Assume that data type is string and they are stored in a list and that list can be stored in a memory.
+    with these factors,
+    quick sort would be efficient algorithm and would work very well with large number of swags.
+    it has O(n LOG n)??
+    Merge sort is a good candidate but it requires O(n) space so it may not good with large data.
+
+
+  >
+
+Feel free to implement or tinker with the code to help think about these questions.
+When you are ready, submit the code and presentation using the link in the previous item in the syllabus.
